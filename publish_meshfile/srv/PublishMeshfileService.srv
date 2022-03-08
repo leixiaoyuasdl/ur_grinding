@@ -1,0 +1,17 @@
+string MeshName
+string MarkerName
+float64 PosX
+float64 PosY
+float64 PosZ
+float64 RotX
+float64 RotY
+float64 RotZ
+float64 RotW
+float64 ColorR
+float64 ColorG
+float64 ColorB
+float64 ColorA
+bool WaitForSubscriber
+---
+bool ReturnStatus
+string ReturnMessage

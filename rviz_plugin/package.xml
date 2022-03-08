@@ -1,0 +1,23 @@
+<package format="2">
+  <name>fanuc_grinding_rviz_plugin</name>
+  <version>0.0.0</version>
+  <description>Grinding RViz plugin</description>
+
+  <author>Kévin Bolloré, Victor Lamoine - Institut Maupertuis</author>
+  <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
+  <license>BSD-3-Clause-Attribution</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>class_loader</depend>
+  <depend>fanuc_grinding_alignment</depend>
+  <depend>fanuc_grinding_comparison</depend>
+  <depend>fanuc_grinding_path_planning</depend>
+  <depend>fanuc_post_processor</depend>
+  <depend>fanuc_grinding_scanning</depend>
+  <depend>rviz</depend>
+
+  <export>
+      <rviz plugin="${prefix}/plugin_description.xml"/>
+  </export>
+</package>

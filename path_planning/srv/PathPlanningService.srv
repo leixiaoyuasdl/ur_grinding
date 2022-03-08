@@ -1,0 +1,19 @@
+bool SurfacingMode
+string CADFileName
+string ScanFileName
+float64 GrinderWidth
+uint32 CoveringPercentage
+float64 ExtricationRadius
+float64 DepthOfPass
+bool AngleX
+bool AngleY
+bool AngleZ
+float64 LeanAngle
+bool Compute
+bool Simulate
+float64 TrajectoryZOffset
+---
+bool ReturnStatus
+string ReturnMessage
+geometry_msgs/Pose[] RobotPosesOutput
+bool[] IsGrindingPose

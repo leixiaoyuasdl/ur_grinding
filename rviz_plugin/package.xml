@@ -1,5 +1,5 @@
 <package format="2">
-  <name>fanuc_grinding_rviz_plugin</name>
+  <name>ur_grinding_rviz_plugin</name>
   <version>0.0.0</version>
   <description>Grinding RViz plugin</description>
 

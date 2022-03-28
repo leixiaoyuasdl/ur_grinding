@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-project(fanuc_grinding_rviz_plugin)
+project(ur_grinding_rviz_plugin)
 add_compile_options(-Wall -Wextra)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

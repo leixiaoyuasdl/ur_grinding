@@ -53,10 +53,6 @@
     <arg name="debug" default="$(arg debug)" />
   </include>
 
-
- 
-
-
   <!-- Including different nodes -->
   <node name="publish_meshfile" pkg="fanuc_grinding_publish_meshfile" type="fanuc_grinding_publish_meshfile" output="screen"/>
   <node name="scanning" pkg="fanuc_grinding_scanning" type="fanuc_grinding_scanning" output="screen"/>

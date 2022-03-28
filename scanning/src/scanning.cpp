@@ -328,7 +328,6 @@ int main(int argc, char **argv)
   while (node->ok())
   {
     sleep(1);
-    ros::spin();
   }
   spinner.stop();
   return 0;

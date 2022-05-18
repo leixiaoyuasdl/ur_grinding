@@ -5,7 +5,10 @@
   ```
   https://github.com/KevinBollore/fanuc_grinding
   ```
+# 环境
+ubuntu 16.04
 
+ros kinetic
 # 使用
 ```
 roslaunch ur_grinding_rviz_plugin ur_grinding.launch

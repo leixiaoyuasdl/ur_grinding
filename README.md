@@ -7,8 +7,11 @@ ubuntu 16.04
 ros kinetic
 # 依赖
 ```
-bezier
-https://github.com/ros-industrial-consortium/bezier
+VTK 8.0.0
+
+PCL 1.8.1
+
+bezier(不能使用最新版本，因此直接提供相应版本的bezier库)
 
 UR
 https://github.com/UniversalRobots/Universal_Robots_ROS_Driver

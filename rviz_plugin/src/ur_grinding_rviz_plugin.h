@@ -7,8 +7,6 @@
 #endif
 
 #include "scanning_widget.h"
-#include "alignment_widget.h"
-#include "comparison_widget.h"
 #include "path_planning_widget.h"
 
 class QTabWidget;
@@ -38,8 +36,6 @@ protected Q_SLOTS:
   void displayMsgBoxHandler(const QString title, const QString msg, const QString info_msg);
 
   void enablePanelHandler(const bool);
-  void enablePanelAlignmentHandler();
-  void enablePanelComparisonHandler();
   void enablePanelPathPlanningHandler();
   void enablePanelPostProcessorHandler();
   void setCADDatas(const QString cad_path);
@@ -52,8 +48,6 @@ protected:
 
   QTabWidget* tab_widget_;
   ScanningWidget* scanning_widget_;
-  AlignmentWidget* alignment_widget_;
-  ComparisonWidget* comparison_widget_;
   PathPlanningWidget* path_planning_widget_;
 
   QLabel* status_label_;

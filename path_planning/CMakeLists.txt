@@ -18,7 +18,7 @@ find_package(KDL)
 set(KDL /usr/local)
 
 find_package(PCL 1.8.0 REQUIRED)
-find_package(VTK 8.0 REQUIRED COMPONENTS vtkFiltersHybrid NO_MODULE)
+find_package(VTK )
 
 add_service_files(FILES PathPlanningService.srv)
 generate_messages(DEPENDENCIES geometry_msgs std_msgs)

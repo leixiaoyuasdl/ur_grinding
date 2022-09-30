@@ -1,7 +1,0 @@
-string CADFileName
-string CADMarkerName
-string ScanFileName
-string ScanMarkerName
----
-bool ReturnStatus
-string ReturnMessage

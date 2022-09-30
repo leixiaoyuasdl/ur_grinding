@@ -7,8 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
                     class_loader
-                    fanuc_grinding_alignment
-                    fanuc_grinding_comparison
                     fanuc_grinding_path_planning
                     fanuc_grinding_scanning
                     rviz)
@@ -45,8 +43,6 @@ link_directories(${catkin_LIBRARY_DIRS})
 
 qt5_wrap_cpp(
   MOCS_FILES
-  src/alignment_widget.h
-  src/comparison_widget.h
   src/${PROJECT_NAME}.h
   src/path_planning_widget.h
   src/scanning_widget.h
@@ -54,8 +50,6 @@ qt5_wrap_cpp(
 
 add_library(
   ${PROJECT_NAME}
-  src/alignment_widget.cpp
-  src/comparison_widget.cpp
   src/${PROJECT_NAME}.cpp
   src/path_planning_widget.cpp
   src/scanning_widget.cpp

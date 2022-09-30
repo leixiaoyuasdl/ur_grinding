@@ -12,7 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 find_package(PCL 1.8 REQUIRED)
-find_package(VTK)
+find_package(VTK 8.0.0 REQUIRED)
 
 
 ################################################

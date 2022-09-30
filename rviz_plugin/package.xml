@@ -13,7 +13,6 @@
   <depend>fanuc_grinding_alignment</depend>
   <depend>fanuc_grinding_comparison</depend>
   <depend>fanuc_grinding_path_planning</depend>
-  <depend>fanuc_post_processor</depend>
   <depend>fanuc_grinding_scanning</depend>
   <depend>rviz</depend>
 

@@ -10,7 +10,6 @@ find_package(catkin REQUIRED COMPONENTS
                     fanuc_grinding_alignment
                     fanuc_grinding_comparison
                     fanuc_grinding_path_planning
-                    fanuc_post_processor
                     fanuc_grinding_scanning
                     rviz)
 
@@ -50,7 +49,6 @@ qt5_wrap_cpp(
   src/comparison_widget.h
   src/${PROJECT_NAME}.h
   src/path_planning_widget.h
-  src/post_processor_widget.h
   src/scanning_widget.h
 )
 
@@ -60,7 +58,6 @@ add_library(
   src/comparison_widget.cpp
   src/${PROJECT_NAME}.cpp
   src/path_planning_widget.cpp
-  src/post_processor_widget.cpp
   src/scanning_widget.cpp
   ${MOCS_FILES}
 )

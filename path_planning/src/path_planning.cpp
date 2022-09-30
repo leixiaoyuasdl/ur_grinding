@@ -90,8 +90,7 @@ bool pathPlanning(fanuc_grinding_path_planning::PathPlanningService::Request &re
       res.ReturnMessage = "Please select a lean angle axis for the effector";
       return true;
     }
-      input_mesh_filename = req.CADFileName;
-      input_mesh_filename="/home/fzt/catkin_robot/aa.ply";
+      input_mesh_filename = req.ScanFileName;
       cout<<"file name "<<input_mesh_filename<<endl;
     if (!bezier || input_mesh_filename.compare(req.CADFileName) != 0)
     {
@@ -179,13 +178,7 @@ bool pathPlanning(fanuc_grinding_path_planning::PathPlanningService::Request &re
           q_init=q_sol;
           way_points_msg.push_back(tmp);
       }
-      else {
-          error_point++;
-          std::cout << "无解 " <<error_point<<" "<<su<< std::endl;
-      }
-
   }
-    std::cout << "总结点数目 " <<su<<std::endl;
     res.RobotPosesOutput = way_points_msg;
   for (std::vector<bool>::const_iterator iter(is_grinding_pose.begin()); iter != is_grinding_pose.end(); ++iter)
     res.IsGrindingPose.push_back(*iter);

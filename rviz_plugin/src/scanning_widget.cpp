@@ -35,7 +35,7 @@ fanuc_grinding_rviz_plugin::ScanningWidget::ScanningWidget(QWidget* parent) :
   import_cad_button_ = new QPushButton("Import CAD file");
 
   scan_choice_container_ = new QWidget;
-  scan_choice_container_->setEnabled(false);
+  scan_choice_container_->setEnabled(true);
   QVBoxLayout* scan_choice_layout = new QVBoxLayout(scan_choice_container_);
 
   scan_choice_widget_ = new QTabWidget;

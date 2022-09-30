@@ -1,4 +1,4 @@
-<library path="lib/libfanuc_grinding_rviz_plugin">
+<library path="lib/libur_grinding_rviz_plugin">
   <class name="ur_grinding_rviz_plugin/ur_grinding"
          type="fanuc_grinding_rviz_plugin::FanucGrindingRvizPlugin"
          base_class_type="rviz::Panel">

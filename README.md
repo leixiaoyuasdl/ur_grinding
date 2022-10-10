@@ -2,7 +2,7 @@
 # 介绍
   智能打磨机器人，相机识别物体表面，并进行打磨轨迹规划。
 # 环境
-ubuntu 16.04
+ubuntu 16.04 and ubuntu 20.04
 
 ros kinetic
 # 依赖
@@ -11,7 +11,8 @@ VTK 8.0.0
 
 PCL 1.8.1
 
-bezier(不能使用最新版本，因此直接提供相应版本的bezier库)
+bezier
+https://github.com/ros-industrial-consortium/bezier
 
 UR
 https://github.com/UniversalRobots/Universal_Robots_ROS_Driver

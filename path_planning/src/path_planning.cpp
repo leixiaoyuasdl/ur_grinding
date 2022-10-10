@@ -190,7 +190,7 @@ bool pathPlanning(fanuc_grinding_path_planning::PathPlanningService::Request &re
           error_point++;
           }
   }
-  std::cout<<"error_point "<<error_point<<std::endl;
+  std::cout<<"逆解求解失败的路径点数目： "<<error_point<<std::endl;
     res.RobotPosesOutput = way_points_msg;
   for (std::vector<bool>::const_iterator iter(is_grinding_pose.begin()); iter != is_grinding_pose.end(); ++iter)
     res.IsGrindingPose.push_back(*iter);

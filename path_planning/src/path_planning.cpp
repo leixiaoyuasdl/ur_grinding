@@ -121,7 +121,8 @@ bool pathPlanning(fanuc_grinding_path_planning::PathPlanningService::Request &re
   std::vector<geometry_msgs::Pose> way_points_msg;
 
     KDL::Tree tree;
-    kdl_parser::treeFromFile("/home/fzt/catkin_robot/src/universal_robot/ur_e_description/urdf/ur5e_robot.urdf", tree);
+    std::string ename = ros::package::getPath("ur_e_description");
+    kdl_parser::treeFromFile(filename+"/urdf/ur5e_robot.urdf", tree);
 
     KDL::Chain chain;
     tree.getChain("base_link", "tool0", chain);

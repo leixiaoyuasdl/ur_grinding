@@ -37,9 +37,9 @@ Panels:
     PathPlanningWidget_radio_z: false
     PathPlanningWidget_surfacing_mode: true
     PathPlanningWidget_trajectory_z_offset: 0
-    ScanningWidget_cad_file: /home/fzt/catkin_robot/src/ur/ur_grinding/scanning/meshes/DAC_580813.stl
+    ScanningWidget_cad_file: 
     ScanningWidget_cad_marker_name: cad
-    ScanningWidget_scan_filename: /home/fzt/catkin_robot/src/ur/ur_grinding/scanning/meshes/DAC_580813_scan.ply
+    ScanningWidget_scan_filename: 
     ScanningWidget_scan_marker_name: scan
 Toolbars:
   toolButtonStyle: 2

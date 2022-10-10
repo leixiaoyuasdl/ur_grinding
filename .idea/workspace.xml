@@ -10,8 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="728fbe20-c29e-4e4f-a3b9-87032179fb67" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/path_planning/src/path_planning.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/src/path_planning.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rviz_plugin/config/robot_state_visualize.rviz" beforeDir="false" afterPath="$PROJECT_DIR$/rviz_plugin/config/robot_state_visualize.rviz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scanning/src/scanning.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scanning/src/scanning.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/aa/src" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -45,10 +45,17 @@
       <option name="presentableId" value="Default" />
       <updated>1665372578159</updated>
       <workItem from="1665372579272" duration="807000" />
+      <workItem from="1665404714887" duration="965000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1223" y="287" width="424" height="491" key="FileChooserDialogImpl" timestamp="1665405042460">
+      <screen x="0" y="27" width="1920" height="1005" />
+    </state>
+    <state x="1223" y="287" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1005@0.27.1920.1005" timestamp="1665405042460" />
   </component>
 </project>

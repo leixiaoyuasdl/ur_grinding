@@ -23,12 +23,10 @@ one node of the entire demonstrator
 #include <pcl/point_cloud.h>
 #include <pcl/common/colors.h>
 #include <pcl/common/transforms.h>
-#include <pcl/io/davidsdk_grabber.h>
 #include <pcl/io/ply_io.h>
 #include <pcl/filters/voxel_grid.h>
 
 // PCL davidSDK object pointer
-pcl::DavidSDKGrabber::Ptr davidsdk_ptr;
 
 typedef pcl::PointXYZ PointXYZ;
 typedef pcl::PointCloud<PointXYZ> PointCloudXYZ;

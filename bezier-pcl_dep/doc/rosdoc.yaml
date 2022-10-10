@@ -1,4 +1,0 @@
- - builder: doxygen
-   name: bezier C++ API
-   output_dir: bezier_c++
-   file_patterns: '*.c *.cpp *.h *.hpp'

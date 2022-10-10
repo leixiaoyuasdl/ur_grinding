@@ -121,8 +121,17 @@ bool pathPlanning(fanuc_grinding_path_planning::PathPlanningService::Request &re
   std::vector<geometry_msgs::Pose> way_points_msg;
 
     KDL::Tree tree;
-    std::string ename = ros::package::getPath("ur_e_description");
-    kdl_parser::treeFromFile(filename+"/urdf/ur5e_robot.urdf", tree);
+//    std::string ename = ros::package::getPath("ur_e_description");
+//    kdl_parser::treeFromFile(filename+"/urdf/ur5e_robot.urdf", tree);
+
+
+    std::string robot_desc_string;
+    node->param("robot_description", robot_desc_string, string());
+    if (!kdl_parser::treeFromString(robot_desc_string, tree)){
+        ROS_ERROR("Failed to construct kdl tree");
+        return false;
+    }
+
 
     KDL::Chain chain;
     tree.getChain("base_link", "tool0", chain);
@@ -155,8 +164,6 @@ bool pathPlanning(fanuc_grinding_path_planning::PathPlanningService::Request &re
   for (Eigen::Affine3d pose : way_points_vector)
   {
       su++;
-
-
           geometry_msgs::Pose tmp,txt;
           pose.translation() += Eigen::Vector3d(0, 0, req.TrajectoryZOffset);
           tf::poseEigenToMsg(pose, tmp);
@@ -179,7 +186,11 @@ bool pathPlanning(fanuc_grinding_path_planning::PathPlanningService::Request &re
           q_init=q_sol;
           way_points_msg.push_back(tmp);
       }
+      else {
+          error_point++;
+          }
   }
+  std::cout<<"error_point "<<error_point<<std::endl;
     res.RobotPosesOutput = way_points_msg;
   for (std::vector<bool>::const_iterator iter(is_grinding_pose.begin()); iter != is_grinding_pose.end(); ++iter)
     res.IsGrindingPose.push_back(*iter);
@@ -193,7 +204,7 @@ bool pathPlanning(fanuc_grinding_path_planning::PathPlanningService::Request &re
   }
 
   tf::TransformListener listener;
-  listener.waitForTransform("/base", tcp_name, ros::Time::now(), ros::Duration(1.0));
+  listener.waitForTransform("base_link", tcp_name, ros::Time::now(), ros::Duration(1.0));
 
   // Execute this trajectory
   moveit_msgs::ExecuteKnownTrajectory srv;
@@ -205,7 +216,11 @@ bool pathPlanning(fanuc_grinding_path_planning::PathPlanningService::Request &re
 //    double percentage=1;
   status.data = boost::lexical_cast<std::string>(percentage*100) + "% of the trajectory will be executed";
   status_pub->publish(status);
-  executeKnownTrajectoryServiceClient.call(srv);
+  moveit::planning_interface::MoveGroupInterface::Plan plan;
+	    plan.trajectory_ = srv.request.trajectory;
+	    // 执行运动
+	    group->execute(plan);
+  //executeKnownTrajectoryServiceClient.call(srv);
 //    learning_communication::Person msg;
 //    msg.finish =true;
 //    chatter_pub.pulse
@@ -225,7 +240,7 @@ int main(int argc,
 
   // Initialize move group
   group.reset(new moveit::planning_interface::MoveGroupInterface("manipulator"));
-  group->setPoseReferenceFrame("/base_link");
+  group->setPoseReferenceFrame("base_link");
   group->allowReplanning(true);
     //设置位置(单位：米)和姿态（单位：弧度）的允许误差
 //    group->setGoalPositionTolerance(0.01);

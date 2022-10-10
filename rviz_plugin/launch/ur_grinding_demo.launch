@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <arg name="sim" default="true" />
+
+
+ <include file="$(find ur_gazebo)/launch/ur10.launch">
+  </include>
+
+  <include file="$(find ur10_moveit_config)/launch/ur10_moveit_planning_execution.launch">
+    <arg name="sim" value="true"/>
+  </include>
+
+
+  <!-- Including ur_grinding nodes -->
+  <node name="publish_meshfile" pkg="fanuc_grinding_publish_meshfile" type="fanuc_grinding_publish_meshfile" output="screen"/>
+  <node name="scanning" pkg="fanuc_grinding_scanning" type="fanuc_grinding_scanning" output="screen"/>
+  <node name="path_planning" pkg="fanuc_grinding_path_planning" type="fanuc_grinding_path_planning" output="screen"/> 
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ur_grinding_rviz_plugin)/config/robot_state_visualize.rviz" output="screen" required="true" />
+
+</launch>

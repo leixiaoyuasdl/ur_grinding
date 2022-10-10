@@ -2,9 +2,9 @@
 # 介绍
   智能打磨机器人，相机识别物体表面，并进行打磨轨迹规划。
 # 环境
-ubuntu 16.04 and ubuntu 20.04
+ubuntu 16.04 or ubuntu 20.04
 
-ros kinetic
+ros kinetic or ros noetic
 # 依赖
 ```
 VTK 8.0.0

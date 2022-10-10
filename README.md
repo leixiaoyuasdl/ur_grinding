@@ -18,6 +18,11 @@ UR
 https://github.com/UniversalRobots/Universal_Robots_ROS_Driver
 ```
 # 使用
+仿真
+```
+roslaunch ur_grinding_rviz_plugin ur_grinding_demo.launch
+```
+连接实际机器人
 ```
 roslaunch ur_grinding_rviz_plugin ur_grinding.launch
 ```

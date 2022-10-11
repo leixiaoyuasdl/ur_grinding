@@ -310,15 +310,7 @@ void fanuc_grinding_rviz_plugin::ScanningWidget::importCADFileButtonHandler()
 
 void fanuc_grinding_rviz_plugin::ScanningWidget::importScanFileButtonHandler()
 {
-  QFileInfo Fout(cad_meshname_->text());
-  if(!Fout.exists())
-  {
-    Q_EMIT sendMsgBox("Error loading scan file",
-                      "The specified file does not exist",
-                      cad_meshname_->text());
-    Q_EMIT sendStatus("Scan file does not exist");
-    return;
-  }
+
   if(scan_marker_name_line_->text().isEmpty())
   {
     Q_EMIT sendMsgBox("Error publishing scan marker",
